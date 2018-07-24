@@ -23,10 +23,14 @@
 			<p>OFish is a tool designed for Oligodendroglioma FISH analysis.</p>
 		</div>
 		<br>
+		<div>
+			<p> Please see click <a href="secondchecker"> here </a> for second checker input </p>
+		</div>
 	<form action=' ' method='POST'>{% csrf_token %}
 		
 		<div class="patient">
 			Patient Name: <input type="text" name="Patient" value="{{ PN }}"> Hospital Number: <input type="tel" name="Hospital" value="{{ H }}"> NHS number: <input type="tel" name="NHS" value="{{ NHS }}">
+			Date of Birth: <input type="date" name="date">
 			Input by: <input type="text" name="Checker" value="{{ Checker }}">
 		</div>
 		<br>
@@ -170,10 +174,6 @@
 			</table>
 			<br>
 			<br>
-			<div>
-			Second Checker: <input type="checkbox" name="Second Checker" id= "Checker" value="{{ Second }}" 
-			onclick="myFunction()">
-			</div>
 			<br>
 			<input type='submit' value='Submit'>
 			<br> 
@@ -188,19 +188,4 @@
 		</div>
 
 	</body>	
-	<script>
-	function myFunction() {
-		// Get the checkbox
-		var checkBox = document.getElementsById('Checker');
-		// Get Form
-		var form = document.getElementsById("myTable");
-
-		// If the checkbox is checked, display the table 
-		if (checkBox.checked == true){
-			
-			
-		} 
-
-	}
-	</script>
 </html>
